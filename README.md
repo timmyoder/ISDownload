@@ -13,7 +13,7 @@ You MUST specify the first year to download data for (multiple years can optiona
 
 By default, the tool uses the ISD Lite dataset and overwrites existing files. These options can be changed with the corresponding flags.
 
-If using the full ISD dataset, beware that there is much more data as there are multiple readings per hour and many additional readings compared to the ISD Lite dataset. The ISD Lite dataset also has some cleaning and validation performed.
+If using the full ISD dataset, beware that there is much more data as there are multiple readings per hour and many additional readings compared to the ISD Lite dataset.
 
 ```
 usage: isdownload.py [-h] [--id ID] [--file FILE] --year YEAR [--to-year TO_YEAR] [--isd-full] [--no-overwrite]
@@ -52,11 +52,11 @@ Place a csv file with desired station  into the `input_data/` directory. **The c
 
 usage
 
-* `python lookup.py --file FILE_NAME --year YEAR`
+* `python isdownload.py --file FILE_NAME --year YEAR`
 
 example
 
-* `python lookup.py --file sample_input.csv --year 2020`
+* `python isdownload.py --file sample_input.csv --year 2020`
 
 ### Download data for a range of years
 
@@ -64,10 +64,31 @@ The tool can be used to download data from multiple years at once (and for multi
 
 usage (shown with file input, but can also be used with --id station input)
 
-* `python lookup.py --file FILE_NAME --year YEAR, --to-year TO_YEAR`
+* `python isdownload.py --file FILE_NAME --year YEAR, --to-year TO_YEAR`
 
 example
 
-* `python lookup.py --file sample_input.csv --year 2020 --to-year 2022`
+* `python isdownload.py --file sample_input.csv --year 2020 --to-year 2022`
 
 
+## ISD Lite Info
+
+Below are some relevant excerpts from the [ISD Lite documentation](https://www.ncei.noaa.gov/pub/data/noaa/isd-lite/isd-lite-technical-document.pdf) highlighting some differences between it and the full dataset: 
+
+### Suitability of Data
+
+The ISD-Lite product is not intended to replace the full ISD for situations where exact observation time and/or observation density is critical. Instead, it is designed to be a
+smaller and easier to work with format which may be suitable for investigating trends,
+larger scale patterns or rough climatological averages.
+
+It should also be noted that inter-comparison of fields across an observational hour may
+not be recommended due to the possibility of slight differences in actual observation
+time between elements. This feature is most pronounced between the “mandatory”
+elements and the “additional” elements, for example air temperature versus precipitation.
+In many cases the observation time for these elements can differ by as much as ten
+minutes. 
+
+### Suitability of Data
+The ISD-Lite product is not intended to replace the full ISD for situations where exact observation time and/or observation density is critical. Instead, it is designed to be a smaller and easier to work with format which may be suitable for investigating trends, larger scale patterns or rough climatological averages. 
+
+It should also be noted that inter-comparison of fields across an observational hour may not be recommended due to the possibility of slight differences in actual observation time between elements. This feature is most pronounced between the “mandatory” elements and the “additional” elements, for example air temperature versus precipitation. In many cases the observation time for these elements can differ by as much as ten minutes. 
