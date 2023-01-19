@@ -75,18 +75,23 @@ example
 
 Below are some relevant excerpts from the [ISD Lite documentation](https://www.ncei.noaa.gov/pub/data/noaa/isd-lite/isd-lite-technical-document.pdf) highlighting some differences between it and the full dataset: 
 
-### Suitability of Data
+### Introduction
+The ISD-Lite product is designed to be an easier to work with subset of the larger
+Integrated Surface Data hourly dataset. ISD-Lite contains eight common hourly timeseries climatological variables represented in a fixed-width format. The elements
+extracted are:
 
-The ISD-Lite product is not intended to replace the full ISD for situations where exact observation time and/or observation density is critical. Instead, it is designed to be a
-smaller and easier to work with format which may be suitable for investigating trends,
-larger scale patterns or rough climatological averages.
+1. Air temperature (degrees Celsius * 10)
+2. Dew point temperature (degrees Celsius * 10)
+3. Sea level pressure (hectopascals)
+4. Wind direction (angular degrees)
+5. Wind speed (meters per second * 10)
+6. Total cloud cover (coded, see format documentation)
+7. One-hour accumulated liquid precipitation (millimeters)
+8. Six-hour accumulated liquid precipitation (millimeters)
 
-It should also be noted that inter-comparison of fields across an observational hour may
-not be recommended due to the possibility of slight differences in actual observation
-time between elements. This feature is most pronounced between the “mandatory”
-elements and the “additional” elements, for example air temperature versus precipitation.
-In many cases the observation time for these elements can differ by as much as ten
-minutes. 
+The ISD-Lite data are represented with a modified time stamp which corresponds to the
+nearest hour of actual observation. Sub-hourly observations were removed. Duplicate
+observations were resolved according to a ranking system. 
 
 ### Suitability of Data
 The ISD-Lite product is not intended to replace the full ISD for situations where exact observation time and/or observation density is critical. Instead, it is designed to be a smaller and easier to work with format which may be suitable for investigating trends, larger scale patterns or rough climatological averages. 
