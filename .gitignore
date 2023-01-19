@@ -1,5 +1,5 @@
 # input files and  datafiles are not added to git
-output/
+weather_data_output/
 input/*
 !input/sample_input.csv
 

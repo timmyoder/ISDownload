@@ -1,15 +1,13 @@
 import pathlib
 
-ROOT = pathlib.Path(__file__).parent
+ROOT = pathlib.Path(__file__).parent.parent
 LOG_DIR = ROOT / 'logs'
 INPUT_DIR = ROOT / 'input'
-OUTPUT_DIR = ROOT / 'output'
 
-WEATHER_OUT_DIR = OUTPUT_DIR / 'weather_data'
+WEATHER_OUT_DIR = ROOT / 'weather_data_output'
 RAW_DATA_DIR = WEATHER_OUT_DIR / 'raw'
 
-paths = [OUTPUT_DIR,
-         WEATHER_OUT_DIR,
+paths = [WEATHER_OUT_DIR,
          RAW_DATA_DIR,
          INPUT_DIR,
          LOG_DIR,
