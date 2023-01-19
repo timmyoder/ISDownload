@@ -1,7 +1,7 @@
 # ISDownload
 ## Download and parse NOAA ISD Weather Data 
 
-Download data from [NOAA ISD](https://www.ncdc.noaa.gov/isd) weather stations. Just provide an input CSV file with 'USAF', 'WBAN' columns to download raw hourly weather data files from NOAA and parse them to CSVs. 
+Download data from [NOAA ISD](https://www.ncei.noaa.gov/products/land-based-station/integrated-surface-database) weather stations. Just provide an input CSV file with 'USAF', 'WBAN' columns to download raw hourly weather data files from NOAA and parse them to CSVs. 
 
 If you don't know the USAF and WBAN of the weather station, you can use [this tool](https://github.com/timmyoder/isd_station_lookup) to look up the closest weather station to a Lat/Lon point (or list points).  
 
